@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39.3">
+  <project>
+    <settings />
+    <customwidgets />
+  </project>
+  <object class="tk.Toplevel" id="mainwindow">
+    <property name="container">false</property>
+    <property name="cursor">arrow</property>
+    <property name="geometry">320x240</property>
+    <property name="height">400</property>
+    <property name="resizable">both</property>
+    <property name="width">400</property>
+    <child>
+      <object class="ttk.Labelframe" id="fieldset" named="True">
+        <property name="cursor">arrow</property>
+        <property name="height">400</property>
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">Task Scheduler</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Entry" id="time" named="True">
+            <property name="cursor">arrow</property>
+            <property name="exportselection">true</property>
+            <property name="font">TkMenuFont</property>
+            <property name="justify">center</property>
+            <property name="state">normal</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">8:05AM</property>
+            <layout manager="pack">
+              <property name="expand">false</property>
+              <property name="fill">x</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="pygubu.widgets.PathChooserInput" id="path" named="True">
+            <layout manager="pack">
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="scheduler" named="True">
+            <property name="command" type="command" cbtype="with_wid">on_button_click</property>
+            <property name="compound">left</property>
+            <property name="cursor">arrow</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">schedule</property>
+            <bind sequence="&lt;1&gt;" handler="callback" add="" />
+            <layout manager="pack">
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
