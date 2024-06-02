@@ -7,15 +7,19 @@ import pygubu
 PROJECT_PATH = pathlib.Path(__file__).parent
 PROJECT_UI = PROJECT_PATH / "first-ui.ui"
 
+schedulerButton= 'scheduler'
+inputTime='time'
+inputScriptPath='path'
 class EventHandler:
+
     def __init__(self, builder:pygubu.Builder):
+        
+
         self.builder = builder
 
     def on_button_click(self,entry):
-        print(self.builder.get_object('scheduler'))
-        print(self.builder.get_object('time').get())
-        print(self.builder.get_object('path').cget('path'))
-        print(f"Button clicked! Entry content:{entry}")
+        print(self.builder.get_object(inputTime).get())
+        print(self.builder.get_object(inputScriptPath).cget('path'))
 
 class SchedulerApp:
     def __init__(self, master=None):
