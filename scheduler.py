@@ -17,7 +17,7 @@ class EventHandler:
         print(self.builder.get_object('path').cget('path'))
         print(f"Button clicked! Entry content:{entry}")
 
-class HelloworldApp:
+class SchedulerApp:
     def __init__(self, master=None):
         # 1: Create a builder and setup resources path (if you have images)
         self.builder = builder = pygubu.Builder()
@@ -39,5 +39,5 @@ class HelloworldApp:
 
 
 if __name__ == '__main__':
-    app = HelloworldApp()
+    app = SchedulerApp()
     app.run()
