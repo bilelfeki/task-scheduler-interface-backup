@@ -24,6 +24,24 @@
           <property name="side">top</property>
         </layout>
         <child>
+          <object class="ttk.Entry" id="taskname" named="True">
+            <property name="cursor">based_arrow_down</property>
+            <property name="exportselection">false</property>
+            <property name="font">TkMenuFont</property>
+            <property name="justify">center</property>
+            <property name="state">normal</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">Task Name</property>
+            <layout manager="pack">
+              <property name="expand">false</property>
+              <property name="fill">x</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
           <object class="ttk.Entry" id="time" named="True">
             <property name="cursor">arrow</property>
             <property name="exportselection">true</property>
@@ -43,6 +61,7 @@
         </child>
         <child>
           <object class="pygubu.widgets.PathChooserInput" id="path" named="True">
+            <property name="path">Script Location</property>
             <layout manager="pack">
               <property name="side">top</property>
             </layout>
