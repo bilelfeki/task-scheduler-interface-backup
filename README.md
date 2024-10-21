@@ -1,23 +1,48 @@
-## Backup System using GitHub Repositories
 
-This backup system is designed to automate the process of backing up GitHub private repositories by comparing commits between a working repository and a dedicated backup repository. The system is implemented using PowerShell scripting and leverages GitLog for extracting and comparing commit logs.
+# PowerShell Task Scheduler with Pygubu
 
-### How it Works
-
-1. **Commit Comparison**: The system checks all commits in the working repository and compares them with the commits in the backup repository.
-2. **Update or Notification**: If the last commit in the backup repository matches the latest commit in the working repository, the backup repository is updated. Otherwise, a notification is sent to the user.
-3. **Notification**: Notifications are sent using Windows libraries to inform the user of any updates or discrepancies between the repositories.
+This Python project provides a graphical interface for scheduling PowerShell scripts as tasks. It leverages the Pygubu GUI builder to create an easy-to-use interface for scheduling tasks with specified names, execution times, and script paths.
 
 
-### Dependencies
+## Demo
 
-- PowerShell
-- GitLog
-- Windows libraries for notifications
-- Tkinter
-- pygubu
+Here’s a demo of the Task Scheduler in action:
 
-### Usage
+![Task Scheduler Demo](https://github.com/bilelfeki/task-scheduler-interface-backup/blob/master/demo/demo-schedular.gif)
 
-- This backup system is suitable for individuals or teams working with GitHub private repositories who want an automated backup solution.
-- Customize the script according to specific repository setups or notification preferences.
+## Features
+
+- Schedule PowerShell scripts using a simple graphical interface.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Python 3.x
+- Tkinter (for GUI)
+- Pygubu (`pip install pygubu`)
+- PowerShell (installed on Windows by default)
+
+4. Fill in the following fields in the GUI:
+   - **Task Name**: The name of the scheduled task.
+   - **Time**: The time to run the PowerShell script (format: HH:MM AM/PM).
+   - **Script Location**: Path to the PowerShell script file.
+
+5. Click the **Schedule** button to schedule the task.
+
+## Example
+
+- Task Name: `BackupScript`
+- Time: `8:05 AM`
+- Script Location: `C:\Scripts\backup.ps1`
+
+## Main UI Components
+
+- **Task Name**: Text input for the task name.
+- **Time**: Text input for setting the execution time.
+- **Script Location**: File chooser to select the PowerShell script.
+- **Schedule Button**: Button to schedule the task.
+
+## License
+
+This project is licensed under the MIT License.
